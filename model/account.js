@@ -4,6 +4,7 @@ const accountSchema = new mongoose.Schema({
     // - AccountID (Primary Key)
     accountNumber: {
         type: String,
+        unique:true,
         required: true
     },
     accountType: {

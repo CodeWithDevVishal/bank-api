@@ -2,6 +2,8 @@ const Branch = require("../model/branch")
 
 exports.getBranch = async (req, res) => {
     try {
+        // console.log(req.headers['message']);
+         
         const data = await Branch.find()
         return res.json({ errors: false, data: data })
     } catch (error) {
@@ -10,7 +12,7 @@ exports.getBranch = async (req, res) => {
 }
 
 exports.postBranch = async (req, res) => {
-    try {
+    try { 
         const data = await Branch.create(req.body)
         return res.json({ errors: false, data: data })
     } catch (error) {
